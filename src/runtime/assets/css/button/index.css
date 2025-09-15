@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@layer components {
+  .btn-plain {
+    @apply !font-bold !rounded-lg;
+    background: rgba(var(--v-theme-primary), 0.2) !important;
+    color: rgb(var(--v-theme-primary)) !important;
+  }
+  .btn-flat {
+    @apply !text-white !border-black !rounded-lg !font-bold !bg-gradient-to-r from-[rgba(var(--v-theme-primary),0.75)] to-[rgba(var(--v-theme-primary))];
+  }
+  .btn-tonal {
+    background: rgba(var(--v-theme-primary), 0.2) !important;
+    color: rgb(var(--v-theme-primary)) !important;
+    @apply !font-bold !rounded-lg;
+  }
+  .btn-outlined {
+    @apply !bg-transparent !text-white !rounded-lg !font-semibold !shadow-none !transition-all !duration-[1250ms] !ease-[cubic-bezier(0.19,1,0.22,1)];
+    border: 1px rgb(var(--v-theme-primary)) solid !important;
+    color: rgb(var(--v-theme-primary)) !important;
+    @variant hover {
+      @apply !shadow-[inset_0_0_5px_rgba(var(--v-theme-primary),0.3),_0_0_5px_rgba(var(--v-theme-primary),0.2)] !outline-transparent !outline-offset-[10px];
+    }
+  }
+  .btn-text {
+    @apply !bg-transparent !font-semibold;
+    box-shadow: none !important;
+    color: rgb(var(--v-theme-primary)) !important;
+  }
+}

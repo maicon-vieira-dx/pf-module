@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "my-module-playground",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "@tailwindcss/vite": "^4.1.13",
+    "nuxt": "^4.1.1",
+    "tailwindcss": "^4.1.13",
+    "vite-plugin-vuetify": "^2.1.2",
+    "vuetify": "^3.9.7"
+  }
+}
