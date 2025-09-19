@@ -1,9 +1,7 @@
 <template>
-  <v-skeleton-loader type="button" :loading="isClient">
+  <v-skeleton-loader type="button" :loading="isLoading">
     <v-btn v-bind="{ active, appendIcon, baseColor, block, border, color, density, disabled, elevation, exact, flat, height, href, icon, loading, location, maxHeight, maxWidth, minHeight, minWidth, position, prependIcon, readonly, replace, ripple, selectedClass, size, slim, stacked, symbol, tag, text, theme, tile, to, value, width }" :class="`btn-${variant}`">
-      <template #default>
-        <slot />
-      </template>
+      <slot></slot>
     </v-btn>
   </v-skeleton-loader>
 </template>
@@ -63,7 +61,7 @@ defineProps({
     validator: value => ['text', 'flat', 'elevated', 'tonal', 'outlined', 'plain'].includes(value),
   },
   width: [String, Number],
-  isClient: {
+  isLoading: {
     type: Boolean,
     default: false,
   },
