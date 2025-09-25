@@ -78,3 +78,21 @@ describe("Slots", () => {
     expect(wrapper.find(".btn-secondary").text()).toBe("Cancelar");
   });
 });
+
+describe("Props", () => {
+  it.each([
+    ["default", "Conteúdo padrão"],
+    ["title", "Título personalizado"],
+    ["subtitle", "Subtítulo personalizado"],
+    ["text", "Texto personalizado"],
+    ["prepend-icon", "mdi-loupe"],
+    ["append-icon", "mdi-loupe"],
+    ["image", "v-card__image"],
+    ["actions", "<button>Ação</button>"],
+    ["item", "<div>Item</div>"],
+  ])("should render %s prop content", (name, content) => {
+    const wrapper = mount(MCard, { props: { [name]: content } });
+
+    expect(wrapper.html()).toContain(content);
+  });
+});
