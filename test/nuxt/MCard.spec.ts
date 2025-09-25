@@ -40,3 +40,13 @@ describe("Density", () => {
     }
   );
 });
+
+describe("Elevation", () => {
+  it.each(Array.from({ length: 24 }, (_, i) => [i + 1]))(
+    "%s should have correct elevation",
+    (elevation: number) => {
+      const wrapper = mount(MCard, { props: { elevation } });
+      expect(wrapper.classes()).contains(`elevation-${elevation}`);
+    }
+  );
+});
