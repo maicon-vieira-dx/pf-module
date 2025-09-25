@@ -20,3 +20,13 @@ describe("Default", () => {
     expect(wrapper.classes()).contains("v-card-undefined");
   });
 });
+
+describe("Variant", () => {
+  it.each(["flat", "tonal", "plain", "outlined"])(
+    "%s should have correct variant",
+    (variant: string) => {
+      const wrapper = mount(MCard, { props: { variant } });
+      expect(wrapper.classes()).contains(`v-card-${variant}`);
+    }
+  );
+});
