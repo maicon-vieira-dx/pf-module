@@ -39,7 +39,10 @@ defineProps({
     appendIcon: [String, Array, Function, Object],
     border: [String, Number, Boolean],
     color: String,
-    density: String,
+    density: {
+        type: String,
+        validator: (value: string) => ["default","comfortable","compact"].includes(value)
+    },
     disabled: Boolean,
     elevation: {
         type: [String, Number],
@@ -77,6 +80,6 @@ defineProps({
         type: String,
         validator: (value: string) => ['flat', 'tonal', 'outlined', 'plain'].includes(value),
     },
-    width: [String, Number],
+    width: [String, Number]
 });
 </script>
