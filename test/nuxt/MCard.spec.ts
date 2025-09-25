@@ -50,3 +50,31 @@ describe("Elevation", () => {
     }
   );
 });
+
+describe("Slots", () => {
+  it("should render multiple slots", () => {
+    const wrapper = mount(MCard, {
+      slots: {
+        prepend: "<div class='prepend-content'>Ícone</div>",
+        title: "<h3>Título Principal</h3>",
+        subtitle: "<p>Subtítulo explicativo</p>",
+        default: "Conteúdo principal do card com informações importantes",
+        item: "<div>Item</div>",
+        actions: `
+                      <div class="actions">
+                          <button class="btn-primary">Salvar</button>
+                          <button class="btn-secondary">Cancelar</button>
+                      </div>
+                  `,
+      },
+    });
+
+    expect(wrapper.find(".prepend-content").text()).toBe("Ícone");
+    expect(wrapper.find("h3").text()).toBe("Título Principal");
+    expect(wrapper.find("p").text()).toBe("Subtítulo explicativo");
+    expect(wrapper.text()).toContain("Conteúdo principal do card");
+    expect(wrapper.html()).toContain("<div>Item</div>");
+    expect(wrapper.find(".btn-primary").text()).toBe("Salvar");
+    expect(wrapper.find(".btn-secondary").text()).toBe("Cancelar");
+  });
+});
