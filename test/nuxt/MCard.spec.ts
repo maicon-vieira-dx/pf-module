@@ -80,17 +80,37 @@ describe("Slots", () => {
 
 describe("Props", () => {
   it.each([
-    ["default", "Conteúdo padrão"],
     ["title", "Título personalizado"],
-    ["subtitle", "Subtítulo personalizado"],
+    ["subtitle", "Subtítulo personalizado"], 
     ["text", "Texto personalizado"],
-    ["prepend-icon", "mdi-loupe"],
-    ["append-icon", "mdi-loupe"],
-    ["image", "v-card__image"],
-    ["actions", "<button>Ação</button>"],
-    ["item", "<div>Item</div>"],
-  ])("should render %s prop content", (name, content) => {
-    const wrapper = mount(MCard, { props: { [name]: content }});
+    ["image", "https://example.com/image.jpg"],
+    ["prependIcon", "mdi-home"],
+    ["appendIcon", "mdi-check"],
+    ["prependAvatar", "https://example.com/avatar.jpg"],
+    ["appendAvatar", "https://example.com/avatar2.jpg"],
+    ["disabled", true],
+    ["loading", true],
+    ["flat", true],
+    ["hover", true],
+    ["link", true],
+    ["border", true],
+    ["rounded", true],
+    ["tile", true],
+    ["exact", true],
+    ["elevation", 2],
+    ["height", "200px"],
+    ["width", "300px"],
+    ["maxHeight", "500px"],
+    ["maxWidth", "400px"],
+    ["minHeight", "100px"],
+    ["minWidth", "200px"],
+    ["color", "primary"],
+    ["density", "compact"],
+    ["tag", "section"],
+    ["href", "https://example.com"],
+    ["to", "/home"],
+  ])("should render %s prop content", (name: string, content: string | boolean | number) => {
+    const wrapper = shallowMount(MCard, { props: { [name]: content }});
     expect(wrapper.html()).toContain(content);
   });
 });
