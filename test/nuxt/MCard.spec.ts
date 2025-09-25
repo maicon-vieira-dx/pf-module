@@ -30,3 +30,13 @@ describe("Variant", () => {
     }
   );
 });
+
+describe("Density", () => {
+  it.each(["default", "comfortable", "compact"])(
+    "%s should have correct density",
+    (density: string) => {
+      const wrapper = mount(MCard, { props: { density } });
+      expect(wrapper.classes()).contains(`v-card--density-${density}`);
+    }
+  );
+});
