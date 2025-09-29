@@ -1,0 +1,35 @@
+export interface IMCard {
+  appendAvatar?: string;
+  appendIcon?: string | any[];
+  border?: boolean | string;
+  color?: string;
+  density?: "default" | "comfortable" | "compact";
+  disabled?: boolean;
+  elevation?: number;
+  exact?: boolean;
+  flat?: boolean;
+  height?: string | number;
+  hover?: boolean;
+  href?: string;
+  image?: string;
+  link?: boolean;
+  loading?: boolean;
+  maxHeight?: string | number;
+  maxWidth?: string | number;
+  minHeight?: string | number;
+  minWidth?: string | number;
+  position?: 'fixed' | 'static' | 'relative' | 'absolute' | 'sticky';
+  prependAvatar?: string;
+  prependIcon?: string | any[];
+  replace?: boolean;
+  ripple?: boolean;
+  rounded?: boolean | string;
+  subtitle?: string;
+  tag?: string;
+  text?: string;
+  theme?: string;
+  tile?: boolean;
+  title?: string;
+  variant?: "flat" | "elevated" | "tonal" | "outlined" | "plain" | "text";
+  width?: string | number;
+}
