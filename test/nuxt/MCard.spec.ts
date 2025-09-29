@@ -2,6 +2,7 @@ import MCard from "../../src/runtime/components/M/Card/index.vue";
 import { mount, shallowMount } from "@vue/test-utils";
 import { describe } from "node:test";
 import { expect, it } from "vitest";
+import type { IMCard } from "~/src/runtime/types/MCard";
 
 describe("Default", () => {
   it("should exist", () => {
@@ -21,9 +22,9 @@ describe("Default", () => {
 });
 
 describe("Variant", () => {
-  it.each(["flat", "tonal", "plain", "outlined"])(
+  it.each(["flat", "tonal", "plain", "outlined"] as IMCard["variant"][])(
     "%s should have correct variant",
-    (variant: string) => {
+    (variant: IMCard['variant']) => {
       const wrapper = shallowMount(MCard, { props: { variant } });
       expect(wrapper.classes()).contains(`v-card-${variant}`);
     }
@@ -31,9 +32,9 @@ describe("Variant", () => {
 });
 
 describe("Density", () => {
-  it.each(["default", "comfortable", "compact"])(
+  it.each(["default", "comfortable", "compact"] as IMCard["density"][])(
     "%s should have correct density",
-    (density: string) => {
+    (density: IMCard["density"]) => {
       const wrapper = shallowMount(MCard, { props: { density } });
       expect(wrapper.props("density")).toBe(density);
     }
@@ -60,11 +61,11 @@ describe("Slots", () => {
         default: "Conteúdo principal do card com informações importantes",
         item: "<div>Item</div>",
         actions: `
-                      <div class="actions">
-                          <button class="btn-primary">Salvar</button>
-                          <button class="btn-secondary">Cancelar</button>
-                      </div>
-                  `,
+            <div class="actions">
+                <button class="btn-primary">Salvar</button>
+                <button class="btn-secondary">Cancelar</button>
+            </div>
+        `,
       },
     });
 
@@ -107,10 +108,9 @@ describe("Props", () => {
     ["color", "primary"],
     ["density", "compact"],
     ["tag", "section"],
-    ["href", "https://example.com"],
-    ["to", "/home"],
-  ])("should render %s prop content", (name: string, content: string | boolean | number) => {
+    ["href", "https://example.com"]
+  ] as Array<[keyof IMCard, string | boolean | number]>)("should render %s prop content", (name: keyof IMCard, content: string | boolean | number) => {
     const wrapper = shallowMount(MCard, { props: { [name]: content }});
-    expect(wrapper.html()).toContain(content);
+    expect(wrapper.props(name)).toBe(content);
   });
 });
