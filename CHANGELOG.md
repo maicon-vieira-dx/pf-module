@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/maicon-vieira-dx/pf-module/compare/v0.0.2...v0.0.3)
+
 ## v0.0.2
 
 [compare changes](https://github.com/maicon-vieira-dx/pf-module/compare/v1.2.0...v0.0.2)
