@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.2.0
+
+[compare changes](https://github.com/maicon-vieira-dx/pf-module/compare/v1.1.0...v1.2.0)
+
+### 🚀 Enhancements
+
+- Criando workflow para atualizações ([c76dd3f](https://github.com/maicon-vieira-dx/pf-module/commit/c76dd3f))
+
+### 🩹 Fixes
+
+- Corrigindo dependência do tailwind ([5e3b9e1](https://github.com/maicon-vieira-dx/pf-module/commit/5e3b9e1))
+- Corrigindo ortografia do workflow ([05e775f](https://github.com/maicon-vieira-dx/pf-module/commit/05e775f))
+
+### ❤️ Contributors
+
+- AKRKPROMOTORA\maicon.costa <maicon.costa@tecksolucoes.com.br>
+
 ## v1.1.0
 
 [compare changes](https://github.com/maicon-vieira-dx/pf-module/compare/v1.0.0...v1.1.0)
