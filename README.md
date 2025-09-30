@@ -23,6 +23,7 @@ Install the module into your Nuxt application with:
 
 ```bash
 npx nuxi module add @maicon-vieira-dx/components
+```
 
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=020420&colorB=00DC82
