@@ -35,13 +35,13 @@
   "dependencies": {
     "@nuxt/kit": "^4.1.1",
     "@tailwindcss/vite": "^4.1.13",
-    "tailwindcss": "^4.1.13",
     "vuetify": "^3.9.7"
   },
   "devDependencies": {
     "@nuxt/devtools": "^2.6.3",
     "@nuxt/eslint-config": "^1.9.0",
     "@nuxt/module-builder": "^1.0.2",
+    "tailwindcss": "^4.1.13",
     "@nuxt/schema": "^4.1.1",
     "@nuxt/test-utils": "^3.19.2",
     "@types/node": "latest",
@@ -51,5 +51,8 @@
     "typescript": "~5.9.2",
     "vitest": "^3.2.4",
     "vue-tsc": "^3.0.6"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^4.0.0"
   }
 }
