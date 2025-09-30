@@ -14,4 +14,4 @@ jobs:
           node-version: '23'
           registry-url: 'https://npm.pkg.github.com'
       - run: npm install
-      - run: npm release
+      - run: npm run release
