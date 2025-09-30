@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.7
+
+[compare changes](https://github.com/maicon-vieira-dx/pf-module/compare/v0.0.6...v0.0.7)
+
+### 🩹 Fixes
+
+- Removendo node_modules do pacote pt 7 ([e7c35f9](https://github.com/maicon-vieira-dx/pf-module/commit/e7c35f9))
+
+### ❤️ Contributors
+
+- AKRKPROMOTORA\maicon.costa <maicon.costa@tecksolucoes.com.br>
+
 ## v0.0.6
 
 [compare changes](https://github.com/maicon-vieira-dx/pf-module/compare/v0.0.5...v0.0.6)
