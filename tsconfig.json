@@ -1,5 +1,17 @@
 {
-  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["DOM", "ESNext"],
+    "types": ["vite/client", "node"]
+  },
+  "include": ["**/*.ts", "**/*.vue"],
   "exclude": [
     "dist",
     "node_modules",
