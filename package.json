@@ -1,6 +1,6 @@
 {
   "name": "@maicon-vieira-dx/components",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "My components",
   "license": "MIT",
   "type": "module",
@@ -52,10 +52,16 @@
     "nuxt": "^4.1.2",
     "typescript": "~5.9.2",
     "vitest": "^3.2.4",
-    "vue-tsc": "^3.1.0"
+    "vue-tsc": "^3.1.0",
+    "tailwindcss": "^4.1.13",
+    "@tailwindcss/vite": "^4.1.13"
   },
-  "peerDependencies": {
-    "tailwindcss": ">=3.0.0 <5.0.0",
-    "@tailwindcss/vite": ">=3.0.0"
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    },
+    "vuetify": {
+      "optional": true
+    }
   }
 }
