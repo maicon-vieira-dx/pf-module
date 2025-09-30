@@ -23,8 +23,7 @@
     }
   },
   "files": [
-    "dist/module.mjs",
-    "dist/types.d.mts"
+    "dist"
   ],
   "scripts": {
     "prepack": "nuxt-module-build build",
