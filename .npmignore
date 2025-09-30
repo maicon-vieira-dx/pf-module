@@ -1,3 +1,41 @@
-node_modules
+# Dependencies
+node_modules/
+.npm
+.yarn
+
+# Build outputs
 dist/tests
+playground/
+coverage/
+
+# Development files
+*.local
 *.log
+.nuxt
+.output
+.cache
+.temp
+
+# Config files (mantenha apenas os essenciais)
+.eslintrc.*
+.prettierrc.*
+tsconfig.*
+vitest.config.*
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+*.test.*
+*.spec.*
