@@ -13,8 +13,9 @@ export default defineNuxtModule<ModuleOptions>({
     addComponentsDir({
       path: resolver.resolve('runtime/components/M'),
       prefix: 'M',
-    })
+    });
 
+    _nuxt.options.alias["@types"] = resolver.resolve("runtime/types");
     _nuxt.options.css.push(resolver.resolve('runtime/assets/css/main.css'))
   },
 })

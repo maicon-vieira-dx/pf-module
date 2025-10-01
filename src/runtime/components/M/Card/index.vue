@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts" setup>
-import { IMCard } from '../../../types/MCard';
+import type { IMCard } from '@/types/MCard';
 
 const slots = ["image", "prepend", "default", "title", "subtitle", "text", "loader", "append", "actions", "item"];
 const props = withDefaults(defineProps<IMCard>(), {
