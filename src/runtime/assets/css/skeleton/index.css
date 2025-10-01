@@ -1,3 +1,6 @@
 .v-skeleton-loader {
-    @apply !bg-transparent
+    @apply !bg-transparent;
+    .v-skeleton-loader__bone {
+        @apply !m-0
+    }
 }

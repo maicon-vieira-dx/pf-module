@@ -1,9 +1,11 @@
 <template>
-  <v-skeleton-loader type="button" :loading="isLoading">
-    <v-btn v-bind="{ active, appendIcon, baseColor, block, border, color, density, disabled, elevation, exact, flat, height, href, icon, loading, location, maxHeight, maxWidth, minHeight, minWidth, position, prependIcon, readonly, replace, ripple, selectedClass, size, slim, stacked, symbol, tag, text, theme, tile, to, value, width }" :class="`btn-${variant}`">
-      <slot></slot>
-    </v-btn>
+  <v-skeleton-loader type="button" v-if="isLoading">
   </v-skeleton-loader>
+  <v-btn v-else
+    v-bind="{ active, appendIcon, baseColor, block, border, color, density, disabled, elevation, exact, flat, height, href, icon, loading, location, maxHeight, maxWidth, minHeight, minWidth, position, prependIcon, readonly, replace, ripple, selectedClass, size, slim, stacked, symbol, tag, text, theme, tile, to, value, width }"
+    :class="`btn-${variant}`">
+    <slot></slot>
+  </v-btn>
 </template>
 
 <script setup>
