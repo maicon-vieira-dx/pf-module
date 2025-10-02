@@ -1,15 +1,16 @@
 <script lang="ts" setup>
-import type { IMDialog } from '@/types/MDialog';
+import type { IMDialog } from "@/types/MDialog";
 
+const slots = ["append", "title", "text", "actions"];
 const props = withDefaults(defineProps<IMDialog>(), {
   closeOnBack: true,
-  location: 'top',
-  locationStrategy: 'static',
+  location: "top",
+  locationStrategy: "static",
   openOnClick: true,
-  origin: 'center center',
+  origin: "center center",
   retainFocus: true,
   scrim: true,
-  scrollStrategy: 'block',
+  scrollStrategy: "block",
   zIndex: 2400
 })
 </script>
@@ -22,17 +23,8 @@ const props = withDefaults(defineProps<IMDialog>(), {
         </template>
         <template v-slot:default="{ isActive }">
             <MCard v-bind="$attrs">
-                <template v-if="!$attrs.append" #append>
-                  <slot name="append"></slot>
-                </template>
-                <template v-if="!$attrs.title" #title>
-                    <slot name="title"></slot>
-                </template>
-                <template v-if="!$attrs.text" #text>
-                    <slot></slot>
-                </template>
-                <template v-if="$slots.actions" #actions>
-                  <slot name="actions" :isActive="isActive"></slot>
+                <template v-for="name in slots" :key="name">
+                    <slot v-bind="{ name }" v-if="$slots[name]"></slot>
                 </template>
             </MCard>
         </template>
