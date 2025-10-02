@@ -1,0 +1,45 @@
+import type { RouteLocationRaw } from 'vue-router';
+
+export interface IMButton {
+    active?: boolean;
+    activeColor?: string;
+    appendIcon?: string;
+    baseColor?: string;
+    block?: boolean;
+    border?: string | number | boolean;
+    color?: string;
+    density?: "default" | "comfortable" | "compact";
+    disabled?: boolean;
+    elevation?: string | number;
+    exact?: boolean;
+    flat?: boolean;
+    height?: string | number;
+    href?: string;
+    icon?: string | boolean;
+    loading?: boolean | string;
+    location?: any;
+    maxHeight?: string | number;
+    maxWidth?: string | number;
+    minHeight?: string | number;
+    minWidth?: string | number;
+    position?: "static" | "relative" | "fixed" | "absolute" | "sticky";
+    prependIcon?: string;
+    readonly?: boolean;
+    replace?: boolean;
+    ripple?: boolean | object;
+    rounded?: string | number | boolean;
+    selectedClass?: string;
+    size?: "x-small" | "small" | "default" | "large" | "x-large" | string | number;
+    slim?: boolean;
+    stacked?: boolean;
+    symbol?: any;
+    tag?: string;
+    text?: string | boolean;
+    theme?: string;
+    tile?: boolean;
+    to?: string | RouteLocationRaw;
+    value?: any;
+    variant?: "text" | "flat" | "elevated" | "tonal" | "outlined" | "plain";
+    width?: string | number;
+    isLoading?: boolean;
+}

@@ -1,3 +1,14 @@
+<script lang="ts" setup>
+import type { IMCard } from '@/types/MCard';
+
+const slots = ["image", "prepend", "default", "title", "subtitle", "text", "loader", "append", "actions", "item"];
+const props = withDefaults(defineProps<IMCard>(), {
+    elevation: 0,
+    tag: 'div',
+    density: 'default'
+});
+</script>
+
 <template>
     <v-card v-bind="props" :class="`v-card-${variant}`">
     <template v-for="name in slots" :key="name">
@@ -8,14 +19,3 @@
     </template>
   </v-card>
 </template>
-
-<script lang="ts" setup>
-import { IMCard } from '../../../types/MCard';
-
-const slots = ["image", "prepend", "default", "title", "subtitle", "text", "loader", "append", "actions", "item"];
-const props = withDefaults(defineProps<IMCard>(), {
-    elevation: 0,
-    tag: 'div',
-    density: 'default'
-});
-</script>

@@ -1,6 +1,8 @@
-.v-skeleton-loader {
+@layer components {
+  .v-skeleton-loader {
     @apply !bg-transparent;
     .v-skeleton-loader__bone {
-        @apply !m-0
+      @apply !m-0;
     }
+  }
 }
