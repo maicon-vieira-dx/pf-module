@@ -30,7 +30,7 @@
     "dev": "npm run dev:prepare && nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "release": "npm run test && npm run prepack && changelogen && npm publish --access public && git push --follow-tags",
+    "release": "npm run test && npm run prepack && changelogen --release && npm publish --access public && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch",
@@ -38,7 +38,6 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.1.2",
-    "standard-version": "^9.5.0",
     "vuetify": "^3.10.3"
   },
   "devDependencies": {

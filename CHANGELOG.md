@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.0.12
+
+[compare changes](https://github.com/maicon-vieira-dx/pf-module/compare/v0.0.12...v0.0.12)
+
 ### [0.0.12](https://github.com/maicon-vieira-dx/pf-module/compare/v0.0.11...v0.0.12) (2025-10-02)
 
 # Changelog
