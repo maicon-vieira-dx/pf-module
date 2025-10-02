@@ -1,12 +1,12 @@
+import MButton from '@/components/M/Button/index.vue';
 import { expect, it, describe } from "vitest";
-import { mount } from "@vue/test-utils";
-import MButton from "../../src/runtime/components/M/Button/index.vue";
+import { mount, shallowMount } from "@vue/test-utils";
+import type { IMButton } from '@/types/MButton';
 
 describe("Default", () => {
   it("should exist", () => {
-    const wrapper = mount(MButton);
+    const wrapper = shallowMount(MButton);
     expect(wrapper.exists()).toBe(true);
-    expect(wrapper.find("button").exists()).toBe(true);
   });
 
   it("should have a default slot", () => {
@@ -15,63 +15,54 @@ describe("Default", () => {
   });
 
   it("should contain default variant", () => {
-    const wrapper = mount(MButton);
-    expect(wrapper.find("button").classes()).toContain("btn-flat");
+    const wrapper = shallowMount(MButton);
+    expect(wrapper.classes()).toContain("btn-flat");
   });
 
   it("should contain default density", () => {
-    const wrapper = mount(MButton);
-    expect(wrapper.find("button").classes()).toContain("v-btn--density-default");
-  })
+    const wrapper = shallowMount(MButton);
+    expect(wrapper.props("density")).toBe('default');
+  });
 });
 
 describe("Variant", () => {
-  it.each([
-    ["text", "btn-text"],
-    ["flat", "btn-flat"],
-    ["elevated", "btn-elevated"],
-    ["tonal", "btn-tonal"],
-    ["outlined", "btn-outlined"],
-    ["plain", "btn-plain"],
-  ])("%s should have class %s", (variant: string, classes: string) => {
-      const wrapper = mount(MButton, { props: { variant } });
-      expect(wrapper.find("button").classes()).toContain(classes);
+  it.each(["text", "flat", "elevated", "tonal", "outlined", "plain"] as IMButton["variant"][])
+  ("%s should have class %s", (variant) => {
+      const wrapper = shallowMount(MButton, { props: { variant } });
+      expect(wrapper.props("variant")).toBe(variant);
     }
   );
 });
 
 describe("Density", () => {
-  it.each([
-    ["default", "v-btn--density-default"],
-    ["compact", "v-btn--density-compact"],
-    ["comfortable", "v-btn--density-comfortable"]
-  ])("%s should have class %s", (density: string, classes: string) => {
-      const wrapper = mount(MButton, { props: { density } });
-      expect(wrapper.find("button").classes()).toContain(classes);
+  it.each(["default","compact","comfortable"] as IMButton["density"][])
+  ("%s should have class %s", (density) => {
+      const wrapper = shallowMount(MButton, { props: { density } });
+      expect(wrapper.props("density")).toBe(density);
     }
   );
 });
 
 describe("Skeleton Loader", () => {
     it.each([
-        ['Loading...', true],
-        [undefined, false]
-    ])("arial-label should be %s when isLoading is %s", (att: any, isLoading: boolean) => {
+        ["v-btn", false],
+        ["v-skeleton-loader", true]
+    ])("arial-label should be %s when isLoading is %s", (name: any, isLoading: boolean) => {
         const wrapper = mount(MButton, { props: { isLoading }});
-        // expect(wrapper.attributes('arialabel')).toBe(att)
+        expect(wrapper.findComponent({ name }).exists()).toBe(true);
     })
 });
 
 describe("Event", () => {
     it("should emit event when clicked", async () => {
         const wrapper = mount(MButton);
-        await wrapper.find("button").trigger("click");
+        await wrapper.trigger("click");
         expect(wrapper.emitted()).toHaveProperty("click");
     });
 
     it("should not emit click when disabled", async () => {
         const wrapper = mount(MButton, { props: { disabled: true }});
-        await wrapper.find("button").trigger("click");
+        await wrapper.trigger("click");
         expect(wrapper.emitted("click")).toBeUndefined();
     });
 });

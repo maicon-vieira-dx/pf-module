@@ -1,6 +1,6 @@
 import type { RouteLocationRaw } from 'vue-router';
 
-export interface MButton {
+export interface IMButton {
     active?: boolean;
     activeColor?: string;
     appendIcon?: string;
