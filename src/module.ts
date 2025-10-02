@@ -15,7 +15,8 @@ export default defineNuxtModule<ModuleOptions>({
       prefix: 'M',
     });
 
-    _nuxt.options.alias["@types"] = resolver.resolve("runtime/types");
+    _nuxt.options.alias["@/types"] = resolver.resolve("runtime/types");
+    _nuxt.options.alias["@/components"] = resolver.resolve("runtime/components");
     _nuxt.options.css.push(resolver.resolve('runtime/assets/css/main.css'))
   },
 })
