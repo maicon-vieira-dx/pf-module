@@ -9,12 +9,16 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["DOM", "ESNext"],
-    "types": ["vite/client", "node"]
+    "types": ["vite/client", "node"],
+    "paths": {
+      "@/*": ["./src/runtime/*"],
+      "@/components/*": ["./src/runtime/components/*"]
+    }
   },
-  "include": ["**/*.ts", "**/*.vue"],
+  "include": ["**/*.ts", "**/*.vue", "**/*.d.ts"],
   "exclude": [
     "dist",
     "node_modules",
-    "playground",
+    "playground"
   ]
 }

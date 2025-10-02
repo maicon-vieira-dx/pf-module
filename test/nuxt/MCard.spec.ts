@@ -1,8 +1,8 @@
-import MCard from "../../src/runtime/components/M/Card/index.vue";
+import MCard from "@/components/M/Card/index.vue";
+import { IMCard } from "@/types/MCard";
 import { mount, shallowMount } from "@vue/test-utils";
 import { describe } from "node:test";
 import { expect, it } from "vitest";
-import type { IMCard } from "~/src/runtime/types/MCard";
 
 describe("Default", () => {
   it("should exist", () => {
