@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.10
+
+[compare changes](https://github.com/maicon-vieira-dx/pf-module/compare/v0.0.9...v0.0.10)
+
+### 🏡 Chore
+
+- Corrigindo readme ([871eaa6](https://github.com/maicon-vieira-dx/pf-module/commit/871eaa6))
+- Corrigindo readme ([a8c24f8](https://github.com/maicon-vieira-dx/pf-module/commit/a8c24f8))
+
+### ❤️ Contributors
+
+- AKRKPROMOTORA\maicon.costa <maicon.costa@tecksolucoes.com.br>
+
 ## v0.0.9
 
 [compare changes](https://github.com/maicon-vieira-dx/pf-module/compare/v0.0.8...v0.0.9)
