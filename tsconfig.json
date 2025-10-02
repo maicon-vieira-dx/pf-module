@@ -11,13 +11,14 @@
     "lib": ["DOM", "ESNext"],
     "types": ["vite/client", "node"],
     "paths": {
-      "@/*": ["./src/runtime/*"]
+      "@/*": ["./src/runtime/*"],
+      "@/components/*": ["./src/runtime/components/*"]
     }
   },
   "include": ["**/*.ts", "**/*.vue", "**/*.d.ts"],
   "exclude": [
     "dist",
     "node_modules",
-    "playground",
+    "playground"
   ]
 }
