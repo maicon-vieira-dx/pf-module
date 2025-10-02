@@ -1,0 +1,38 @@
+export interface IMDialog {
+  absolute?: boolean;
+  activator?: string | object;
+  activatorProps?: object;
+  attach?: string | boolean;
+  closeDelay?: string | number;
+  closeOnBack?: boolean;
+  closeOnContentClick?: boolean;
+  contained?: boolean;
+  disabled?: boolean;
+  eager?: boolean;
+  fullscreen?: boolean;
+  height?: string | number;
+  location?: string;
+  locationStrategy?: string | Function;
+  maxHeight?: string | number;
+  maxWidth?: string | number;
+  minHeight?: string | number;
+  minWidth?: string | number;
+  modelValue?: boolean;
+  noClickAnimation?: boolean;
+  offset?: string | number | Array<string | number>;
+  opacity?: string | number;
+  openDelay?: string | number;
+  openOnClick?: boolean;
+  openOnFocus?: boolean;
+  openOnHover?: boolean;
+  origin?: string | object;
+  persistent?: boolean;
+  retainFocus?: boolean;
+  scrim?: string | boolean;
+  scrollable?: boolean;
+  scrollStrategy?: string | Function;
+  target?: string | object | Array<string | object>;
+  theme?: string;
+  width?: string | number;
+  zIndex?: string | number;
+}
