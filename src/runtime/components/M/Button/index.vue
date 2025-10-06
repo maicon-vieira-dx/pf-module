@@ -12,6 +12,8 @@ const props = withDefaults(defineProps<IMButton>(), {
   <v-skeleton-loader type="button" v-if="isLoading">
   </v-skeleton-loader>
   <v-btn v-else v-bind="props" :class="`btn-${variant}`">
-    <slot></slot>
+    <template v-if="!$props.text" #default>
+      <slot></slot>
+    </template>
   </v-btn>
 </template>

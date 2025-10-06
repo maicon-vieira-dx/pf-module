@@ -3,7 +3,7 @@ import type { IMCard } from '@/types/MCard';
 
 const slots = ["image", "prepend", "default", "title", "subtitle", "text", "loader", "append", "actions", "item"];
 const props = withDefaults(defineProps<IMCard>(), {
-    elevation: 0,
+    elevation: 1,
     tag: 'div',
     density: 'default'
 });
