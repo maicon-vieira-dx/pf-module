@@ -1,5 +1,32 @@
 # Changelog
 
+## v0.0.12
+
+[compare changes](https://github.com/maicon-vieira-dx/pf-module/compare/v0.0.11...v0.0.12)
+
+### 🚀 Enhancements
+
+- Nova propriedade e funionalidade para o button no dialog ([fb0064c](https://github.com/maicon-vieira-dx/pf-module/commit/fb0064c))
+
+### 🩹 Fixes
+
+- Corrigindo propriedade de text no componente MButton ([d432562](https://github.com/maicon-vieira-dx/pf-module/commit/d432562))
+
+### 🏡 Chore
+
+- **release:** V0.0.11 ([1327953](https://github.com/maicon-vieira-dx/pf-module/commit/1327953))
+- **release:** 0.0.12 ([ba18c8c](https://github.com/maicon-vieira-dx/pf-module/commit/ba18c8c))
+- **release:** V0.0.12 ([0efc753](https://github.com/maicon-vieira-dx/pf-module/commit/0efc753))
+- Removendo a versão v0.0.12 ([cac6655](https://github.com/maicon-vieira-dx/pf-module/commit/cac6655))
+
+### 🎨 Styles
+
+- Alterando estilo de MCard para tema escuro ([5504b42](https://github.com/maicon-vieira-dx/pf-module/commit/5504b42))
+
+### ❤️ Contributors
+
+- AKRKPROMOTORA\maicon.costa <maicon.costa@tecksolucoes.com.br>
+
 ## v0.0.11
 
 [compare changes](https://github.com/maicon-vieira-dx/pf-module/compare/v0.0.10...v0.0.11)
