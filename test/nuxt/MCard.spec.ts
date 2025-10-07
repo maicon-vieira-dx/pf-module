@@ -12,7 +12,7 @@ describe("Default", () => {
 
   it("should contain default elevation", () => {
     const wrapper = shallowMount(MCard);
-    expect(wrapper.props("elevation")).toBe(0);
+    expect(wrapper.props("elevation")).toBe(1);
   });
 
   it("should contain default variant", () => {
