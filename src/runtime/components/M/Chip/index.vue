@@ -7,15 +7,17 @@
 </template>
 
 <script lang="ts" setup>
-import { IMChip } from '@/types/MChip';
+import { IMChip } from "@/types/MChip";
 
 const slots = ["append", "close", "default", "filter", "label", "prepend"];
 
 const props = withDefaults(defineProps<IMChip>(), ({
-  density: 'default',
+  density: "default",
   ripple: true,
-  size: 'default',
-  tag: 'span',
-  variant: 'tonal'
+  size: "default",
+  tag: "span",
+  variant: "tonal",
+  rounded: true,
+  modelValue: true
 }))
 </script>
