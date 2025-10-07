@@ -2,4 +2,5 @@
 @import "./button/index.css";
 @import "./card/index.css";
 @import "./skeleton/index.css";
+@import "./chip/index.css";
 @custom-variant dark (&:where(.dark, .dark *));
