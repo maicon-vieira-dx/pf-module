@@ -1,0 +1,29 @@
+@layer components {
+    .v-chip {
+        @apply !font-bold !rounded-2xl;
+    }
+    .v-chip--variant-tonal {
+        @apply !bg-current/1 !border-t-2 !border-r-2 !border-current/30 !opacity-70 !transition-all !duration-[500ms];
+        @variant hover {
+            @apply !opacity-100
+        }
+    }
+    .v-chip--variant-elevated {
+        @apply !bg-gradient-to-r from-current/5 to-current/35 !shadow-[3px_3px_5px_0px_rgba(var(--v-theme-surface-variant),0.3)] !transition-all !duration-[500ms];
+        @variant hover {
+            @apply !shadow-none
+        }
+    }
+    .v-chip--variant-flat {
+        @apply !border-t-3 !border-l-3 !border-current/50 !transition-all !duration-[100ms];
+        @variant hover {
+            @apply !border-t-0 !border-l-0 !border-b-3 !border-r-3 !border-current/50;
+        }
+    }
+    .v-chip--variant-outlined {
+        @apply !border-2 !border-current shadow-[5px_5px_0_0_color-mix(in_srgb,currentColor_70%,transparent)] !transition-all !duration-[50ms];
+        @variant hover {
+            @apply !border-0 !text-[rgb(var(--v-theme-surface-variant))];
+        }
+    }
+}
