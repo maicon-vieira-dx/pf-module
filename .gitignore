@@ -59,4 +59,4 @@ Temporary Items
 bun.lock
 
 # Playground
-playground/app.vue
+playground/*
